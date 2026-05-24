@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A3 Rocket Consulting | Where McKinsey Rigour Meets Founder Execution</title>
+<meta name="description" content="A3 Rocket Consulting — Strategy, Growth & Operational Transformation advisory. Ex-McKinsey, BCG, Bain, Harvard MBA. 16 practice areas across Healthcare, Fintech, GCC, Aviation & more.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--navy:#050F1E;
+--navy2:#091525;
+--navy3:#0D1C30;
+--navy4:#122038;
+--gold:#C9A84C;
+--gold2:#DDB95E;
+--gold3:#F0D99A;
+--white:#F8F7F4;
+--offwhite:#EEE9DF;
+--gray1:#D8D4CC;
+--gray2:#A8A49C;
+--gray3:#6B6860;
+--gray4:#3A3835;
+--serif:'Cormorant Garamond',Georgia,serif;
+--sans:'DM Sans',system-ui,sans-serif;
+--transition:0.3s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--navy);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;background:rgba(5,15,30,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,0.12)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-mark{width:32px;height:32px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--gold)}
+.nav-logo-name{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--white);letter-spacing:0.05em}
+.nav-links{display:flex;gap:0;align-items:center}
+.nav-links a{color:var(--gray2);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:0 1.25rem;height:68px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:var(--transition)}
+.nav-links a:hover{color:var(--white);border-bottom-color:var(--gold)}
+.nav-cta{margin-left:1rem;background:var(--gold);color:var(--navy)!important;padding:0.55rem 1.4rem!important;height:auto!important;border:none!important;font-weight:500;font-size:0.78rem!important;letter-spacing:0.12em;transition:background var(--transition)!important}
+.nav-cta:hover{background:var(--gold2)!important;border-bottom-color:transparent!important}
+
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 5% 60px;gap:4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,168,76,0.05) 0%,transparent 65%)}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+.hero-left{position:relative;z-index:1}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:2rem;opacity:0;animation:fadeUp 0.9s 0.1s forwards}
+.hero-eyebrow-line{width:40px;height:1px;background:var(--gold)}
+.hero-eyebrow-text{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,4.5vw,5rem);font-weight:500;line-height:1.08;letter-spacing:-0.01em;opacity:0;animation:fadeUp 0.9s 0.25s forwards}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--gray1);max-width:520px;margin-top:1.75rem;line-height:1.85;opacity:0;animation:fadeUp 0.9s 0.4s forwards;font-weight:300}
+.hero-ctas{display:flex;gap:1rem;margin-top:2.5rem;opacity:0;animation:fadeUp 0.9s 0.55s forwards}
+.btn-gold{background:var(--gold);color:var(--navy);padding:0.9rem 2.2rem;font-family:var(--sans);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;transition:background var(--transition);font-weight:500;display:inline-flex;align-items:center;gap:8px}
+.btn-gold:hover{background:var(--gold2)}
+.btn-ghost{background:transparent;color:var(--white);padding:0.9rem 2.2rem;font-family:var(--sans);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.2);cursor:pointer;text-decoration:none;transition:all var(--transition)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-right{position:relative;z-index:1;opacity:0;animation:fadeIn 1.2s 0.6s forwards}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.12)}
+.h-stat{background:var(--navy2);padding:2rem 1.5rem}
+.h-stat-num{font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--gold);line-height:1}
+.h-stat-label{font-size:0.78rem;color:var(--gray2);margin-top:0.4rem;line-height:1.5}
+.hero-pedigree{margin-top:1px;background:var(--navy2);padding:1.25rem 1.5rem;border-top:1px solid rgba(201,168,76,0.12)}
+.pedigree-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray3);margin-bottom:0.6rem}
+.pedigree-firms{display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem}
+.pedigree-firm{font-family:var(--serif);font-size:0.9rem;color:var(--gray2)}
+
+/* ─── TICKER ─── */
+.ticker{background:var(--navy3);border-top:1px solid rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.1);padding:0.9rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:3rem;animation:ticker 30s linear infinite}
+.ticker-item{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray3)}
+.ticker-dot{color:var(--gold);font-size:0.5rem;align-self:center}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── SHARED ─── */
+.section{padding:6rem 5%}
+.s-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem}
+.s-eyebrow-line{width:32px;height:1px;background:var(--gold)}
+.s-eyebrow-text{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.s-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:500;line-height:1.12}
+.s-title em{font-style:italic;color:var(--gold)}
+.s-sub{font-size:1rem;color:var(--gray2);max-width:580px;margin-top:1rem;line-height:1.85}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal.vis{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ─── EDITORIAL INTRO ─── */
+.editorial{background:var(--offwhite);color:var(--navy)}
+.editorial-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.editorial-left .s-eyebrow-line{background:var(--navy3)}
+.editorial-left .s-eyebrow-text{color:var(--navy3)}
+.editorial-left .s-title{color:var(--navy)}
+.editorial-right{}
+.editorial-lead{font-family:var(--serif);font-size:1.55rem;font-weight:400;line-height:1.55;color:var(--navy);margin-bottom:2rem}
+.editorial-lead em{font-style:italic;color:#8B6914}
+.editorial-body{font-size:0.95rem;color:#3A3835;line-height:1.9;margin-bottom:1.5rem}
+.editorial-pullquote{border-left:3px solid #C9A84C;padding:1.25rem 2rem;margin:2rem 0;background:rgba(201,168,76,0.06)}
+.editorial-pullquote p{font-family:var(--serif);font-size:1.35rem;font-style:italic;color:var(--navy);line-height:1.55}
+
+/* ─── WHAT WE DO ─── */
+.whatwedo{background:var(--navy2)}
+.wwd-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.wwd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05)}
+.wwd-card{background:var(--navy2);padding:2.5rem 2rem;transition:background var(--transition);cursor:default}
+.wwd-card:hover{background:var(--navy4)}
+.wwd-num{font-family:var(--serif);font-size:3.5rem;font-weight:400;color:rgba(201,168,76,0.12);line-height:1;margin-bottom:0.5rem}
+.wwd-title{font-family:var(--serif);font-size:1.25rem;font-weight:500;color:var(--white);margin-bottom:0.75rem}
+.wwd-sub{font-size:0.82rem;color:var(--gray2);line-height:1.7;margin-bottom:1rem}
+.wwd-list{list-style:none;border-top:1px solid rgba(255,255,255,0.06);padding-top:1rem}
+.wwd-list li{font-size:0.78rem;color:var(--gray3);padding:0.3rem 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px}
+.wwd-list li::before{content:'';width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* ─── SERVICES FULL ─── */
+.services-full{background:var(--navy)}
+.svc-tabs{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:3rem;overflow-x:auto}
+.svc-tab{padding:1rem 1.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray3);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:all var(--transition);background:none;border-top:none;border-left:none;border-right:none;font-family:var(--sans)}
+.svc-tab.active,.svc-tab:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.svc-panel{display:none}
+.svc-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.svc-panel-left .svc-tagline{font-family:var(--serif);font-size:1.8rem;font-weight:500;line-height:1.3;margin-bottom:1.25rem}
+.svc-panel-left .svc-desc{font-size:0.9rem;color:var(--gray1);line-height:1.85;margin-bottom:2rem}
+.svc-panel-left .svc-insight{background:var(--navy3);border-left:2px solid var(--gold);padding:1.25rem 1.5rem;margin-bottom:2rem}
+.svc-insight-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.svc-insight p{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--gray1);line-height:1.6}
+.svc-outcomes{display:flex;gap:1.5rem;flex-wrap:wrap}
+.svc-outcome{text-align:center}
+.svc-outcome-num{font-family:var(--serif);font-size:2rem;color:var(--gold)}
+.svc-outcome-label{font-size:0.72rem;color:var(--gray2);line-height:1.4;max-width:100px}
+.svc-panel-right{}
+.svc-sub-title{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(201,168,76,0.2)}
+.svc-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.svc-sub-item{}
+.svc-sub-item-title{font-size:0.88rem;font-weight:500;color:var(--white);margin-bottom:0.4rem}
+.svc-sub-item-desc{font-size:0.78rem;color:var(--gray3);line-height:1.6}
+.svc-lifecycle{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)}
+.svc-lifecycle-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray3);margin-bottom:1rem}
+.lifecycle-steps{display:flex;align-items:stretch;gap:0}
+.ls{flex:1;background:var(--navy3);padding:1rem 0.75rem;text-align:center;position:relative;font-size:0.72rem;color:var(--gray2);line-height:1.4}
+.ls::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:0.7rem;z-index:1}
+.ls:last-child::after{display:none}
+.ls strong{display:block;color:var(--gold);font-family:var(--serif);font-size:0.95rem;margin-bottom:0.2rem;font-weight:400}
+
+/* ─── IMPACT ─── */
+.impact-section{background:var(--navy3)}
+.impact-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05)}
+.case{background:var(--navy3);padding:2.5rem 2rem;transition:background var(--transition)}
+.case:hover{background:var(--navy4)}
+.case-sector{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.case-client{font-size:0.75rem;color:var(--gray3);margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.case-title{font-family:var(--serif);font-size:1.15rem;font-weight:500;line-height:1.4;margin-bottom:0.75rem}
+.case-body{font-size:0.82rem;color:var(--gray2);line-height:1.7}
+.case-metrics{display:flex;gap:1.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06)}
+.case-metric-val{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--gold);line-height:1}
+.case-metric-label{font-size:0.7rem;color:var(--gray3);margin-top:0.2rem;line-height:1.4}
+
+/* ─── HOW WE WORK ─── */
+.how{background:var(--offwhite)}
+.how-header{color:var(--navy);margin-bottom:4rem}
+.how-header .s-eyebrow-line{background:var(--navy3)}
+.how-header .s-eyebrow-text{color:var(--navy3)}
+.how-header .s-title{color:var(--navy)}
+.how-header .s-sub{color:#6B6860}
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,0.08)}
+.phase{background:var(--offwhite);padding:2.5rem 1.75rem}
+.phase-num{font-family:var(--serif);font-size:4rem;font-weight:400;color:rgba(0,0,0,0.06);line-height:1;margin-bottom:0.5rem}
+.phase-title{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem}
+.phase-desc{font-size:0.82rem;color:#6B6860;line-height:1.7;margin-bottom:1rem}
+.phase-items{list-style:none}
+.phase-items li{font-size:0.75rem;color:#8B8880;padding:0.25rem 0;display:flex;align-items:center;gap:6px}
+.phase-items li::before{content:'';width:3px;height:3px;background:#C9A84C;border-radius:50%;flex-shrink:0}
+.how-model{margin-top:3rem;background:var(--navy);padding:3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
+.model-item{}
+.model-item-title{font-family:var(--serif);font-size:1.1rem;color:var(--gold);margin-bottom:0.5rem}
+.model-item-desc{font-size:0.82rem;color:var(--gray2);line-height:1.7}
+
+/* ─── WHO WE SERVE ─── */
+.who{background:var(--navy2)}
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.05);margin-top:3rem}
+.who-card{background:var(--navy2);padding:2.5rem 2rem;transition:background var(--transition)}
+.who-card:hover{background:var(--navy4)}
+.who-icon{width:44px;height:44px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.who-icon span{font-family:var(--serif);font-size:1.1rem;color:var(--gold)}
+.who-title{font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:0.75rem}
+.who-desc{font-size:0.85rem;color:var(--gray2);line-height:1.75}
+.who-signals{margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem}
+.who-signal{font-size:0.68rem;letter-spacing:0.06em;color:var(--gold);border:0.5px solid rgba(201,168,76,0.3);padding:0.2rem 0.6rem}
+
+/* ─── ABOUT ─── */
+.about-section{background:var(--navy)}
+.about-grid{display:grid;grid-template-columns:5fr 4fr;gap:6rem;align-items:start}
+.about-bio-lead{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.5;color:var(--gold);margin-bottom:2rem}
+.about-bio-body{font-size:0.95rem;color:var(--gray1);line-height:1.9;margin-bottom:1.25rem}
+.about-bio-body strong{color:var(--white);font-weight:400}
+.principles{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:2rem}
+.principle{padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;gap:1.5rem;align-items:flex-start}
+.p-num{font-family:var(--serif);font-size:2.5rem;color:rgba(201,168,76,0.15);line-height:1;flex-shrink:0;width:40px}
+.p-text{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--gray1);line-height:1.6}
+.timeline-v2{padding-top:1rem}
+.tl2-item{display:grid;grid-template-columns:60px 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.tl2-year{font-family:var(--serif);font-size:0.82rem;color:var(--gold);padding-top:0.15rem}
+.tl2-content{}
+.tl2-firm{font-size:0.88rem;font-weight:400;color:var(--white);margin-bottom:0.2rem}
+.tl2-detail{font-size:0.78rem;color:var(--gray3);line-height:1.5}
+.edu-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.edu-pill{border:0.5px solid rgba(201,168,76,0.35);padding:0.5rem 1rem;font-size:0.72rem;letter-spacing:0.08em;color:var(--gold2)}
+
+/* ─── INSIGHTS ─── */
+.insights{background:var(--navy3)}
+.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05);margin-top:3rem}
+.insight-card{background:var(--navy3);padding:2.5rem 2rem;transition:background var(--transition);cursor:pointer}
+.insight-card:hover{background:var(--navy4)}
+.insight-tag{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+.insight-title{font-family:var(--serif);font-size:1.2rem;font-weight:500;line-height:1.4;margin-bottom:0.75rem}
+.insight-excerpt{font-size:0.82rem;color:var(--gray2);line-height:1.7}
+.insight-read{display:flex;align-items:center;gap:8px;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.insight-read::after{content:'→'}
+
+/* ─── CTA ─── */
+.cta-section{background:var(--navy2);text-align:center;padding:7rem 5%;border-top:1px solid rgba(201,168,76,0.12)}
+.cta-section .s-title{margin:0 auto;max-width:700px}
+.cta-section .s-sub{margin:1.5rem auto 2.5rem;text-align:center}
+
+/* ─── CONTACT ─── */
+.contact-section{background:var(--navy)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.contact-left{}
+.contact-quote{border-left:2px solid var(--gold);padding:1.5rem 2rem;margin-top:2.5rem;background:var(--navy3)}
+.contact-quote p{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--gray1);line-height:1.65}
+.contact-quote cite{display:block;font-size:0.75rem;color:var(--gray3);margin-top:0.75rem;font-style:normal;letter-spacing:0.08em}
+.contact-details{margin-top:2.5rem}
+.cd-item{padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.cd-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem}
+.cd-value{font-size:0.9rem;color:var(--gray1)}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+input,select,textarea{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.1);color:var(--white);padding:1rem 1.25rem;font-family:var(--sans);font-size:0.88rem;font-weight:300;transition:border-color var(--transition);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+input::placeholder,textarea::placeholder{color:var(--gray3)}
+select option{background:var(--navy2)}
+textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{background:var(--gold);color:var(--navy);border:none;padding:1rem 2.5rem;font-family:var(--sans);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:background var(--transition);align-self:flex-start}
+.btn-submit:hover{background:var(--gold2)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy);border-top:1px solid rgba(201,168,76,0.1);padding:2.5rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--serif);font-size:1.2rem;color:var(--gold)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray3);text-decoration:none;transition:color var(--transition)}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:0.72rem;color:var(--gray3)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+@media(max-width:960px){
+.hero{grid-template-columns:1fr;padding-top:90px}
+.hero-right{display:none}
+.wwd-grid,.cases-grid,.phases,.insights-grid{grid-template-columns:1fr}
+.svc-panel.active,.about-grid,.contact-grid,.impact-header,.wwd-header{grid-template-columns:1fr}
+.editorial-grid{grid-template-columns:1fr}
+.who-grid{grid-template-columns:1fr}
+.svc-sub-grid{grid-template-columns:1fr}
+.how-model{grid-template-columns:1fr}
+footer{flex-direction:column;align-items:flex-start}
+.nav-links{display:none}
+}
+
+/* ── DASHBOARD VISUALS ── */
+.dash-wrap{background:var(--navy3);border:1px solid rgba(201,168,76,.12);padding:1.25rem;margin-bottom:1.5rem}
+.dash-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;padding-bottom:.65rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.dash-ttl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+.dash-live{display:flex;align-items:center;gap:5px;font-size:.62rem;color:#4CAF50}
+.dash-live::before{content:'';width:5px;height:5px;background:#4CAF50;border-radius:50%;animation:lp 1.5s infinite}
+@keyframes lp{0%,100%{opacity:1}50%{opacity:.3}}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-bottom:.9rem}
+.dkp{background:var(--navy4);padding:.7rem .65rem;text-align:center}
+.dkp-n{font-family:var(--serif);font-size:1.4rem;color:var(--gold);line-height:1}
+.dkp-l{font-size:.6rem;color:var(--gray3);margin-top:.2rem}
+.dkp-t{font-size:.58rem;color:#4CAF50;margin-top:.1rem}
+.bars{height:60px;display:flex;align-items:flex-end;gap:2px;padding:0 .25rem}
+.bar{flex:1;background:linear-gradient(to top,rgba(201,168,76,.65),rgba(201,168,76,.1));border-radius:1px 1px 0 0;min-height:3px}
+/* KPI STRIP */
+.kstrip{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.kc{background:var(--navy3);padding:.9rem 1.1rem;flex:1;min-width:80px;border-top:2px solid var(--gold)}
+.kc-n{font-family:var(--serif);font-size:1.7rem;color:var(--gold);line-height:1}
+.kc-l{font-size:.68rem;color:var(--gray2);margin-top:.2rem;line-height:1.4}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">A3</div>
+    <span class="nav-logo-name">Consulting</span>
+  </a>
+  <div class="nav-links">
+    <a href="#whatwedo">Capabilities</a>
+    <a href="#services">Services</a>
+    <a href="#impact">Impact</a>
+    <a href="#about">About</a>
+    <a href="#insights">Insights</a>
+    <a href="#contact" class="nav-cta">Talk to Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">A3 Rocket Consulting · Strategy & Growth Advisory</span>
+    </div>
+    <h1>Where McKinsey Rigour Meets<br><em>Founder Execution</em></h1>
+    <p class="hero-sub">We partner with CEOs, boards, and investors to build strategies that don't just sit in decks — they get built, launched, and scaled. From Series A to enterprise transformation.</p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn-gold">Explore Our Work</a>
+      <a href="#contact" class="btn-ghost">Start a Conversation</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="h-stat">
+        <div class="h-stat-num">30×</div>
+        <div class="h-stat-label">Sales growth — Capital One card programme</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">$11M</div>
+        <div class="h-stat-label">Cost savings — MD Anderson Cancer Centre</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">45×</div>
+        <div class="h-stat-label">Customer adoption — BofA BNPL launch</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">£3.7B</div>
+        <div class="h-stat-label">M&A advisory — Tesco Bank / Barclays</div>
+      </div>
+    </div>
+    <div class="hero-pedigree">
+      <div class="pedigree-label">Team Pedigree</div>
+      <div class="pedigree-firms">
+        <span class="pedigree-firm">McKinsey</span>
+        <span class="pedigree-firm">BCG</span>
+        <span class="pedigree-firm">Bain</span>
+        <span class="pedigree-firm">BlackRock</span>
+        <span class="pedigree-firm">Stripe</span>
+        <span class="pedigree-firm">Harvard MBA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Pricing Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">GTM Design</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Business Transformation</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">AI Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">GCC Advisory</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Healthcare Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Capital Advisory</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Fintech & Payments</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">M&A Due Diligence</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Operational Excellence</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Q-Commerce</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Aviation & Mobility</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Fractional COO</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Pricing Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">GTM Design</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Business Transformation</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">AI Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">GCC Advisory</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Healthcare Strategy</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Capital Advisory</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Fintech & Payments</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">M&A Due Diligence</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Operational Excellence</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Q-Commerce</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Aviation & Mobility</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Fractional COO</span><span class="ticker-dot">·</span>
+  </div>
+</div>
+
+<!-- EDITORIAL -->
+<section class="section editorial">
+  <div class="editorial-grid">
+    <div class="editorial-left reveal">
+      <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Our Point of View</span></div>
+      <h2 class="s-title" style="color:var(--navy)">The consulting<br>industry has a<br><em>delivery problem.</em></h2>
+    </div>
+    <div class="editorial-right reveal reveal-delay-1">
+      <p class="editorial-lead">Most firms are exceptional at <em>diagnosing</em> problems. Far fewer are built to <em>solve</em> them — end to end, in the real world, under real constraints.</p>
+      <p class="editorial-body">The gap between strategy and execution is where value gets destroyed. Slide decks are approved. Workshops are run. Roadmaps are published. And then nothing happens — because the people who designed the strategy have moved on to the next engagement.</p>
+      <div class="editorial-pullquote">
+        <p>"The best outcomes happen when someone with MBB training has also done the job themselves — built the team, raised the capital, managed the P&L, and lived with the consequences."</p>
+      </div>
+      <p class="editorial-body">A3 Rocket Consulting was built to close that gap. We bring the analytical rigour of McKinsey, BCG, and Bain — combined with the hands-on operator experience of founders, COOs, and business builders. We don't just advise on transformation. We deliver it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section whatwedo" id="whatwedo">
+  <div class="wwd-header">
+    <div class="reveal">
+      <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Core Capabilities</span></div>
+      <h2 class="s-title">Six ways we<br>create <em>impact</em></h2>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p class="s-sub">From strategy design to operational delivery — we work across the full value chain, not just the front end.</p>
+    </div>
+  </div>
+  <div class="wwd-grid">
+    <div class="wwd-card reveal">
+      <div class="wwd-num">01</div>
+      <div class="wwd-title">Strategy & Growth</div>
+      <div class="wwd-sub">Market entry, GTM architecture, revenue growth, and international expansion — built to execute, not just to present.</div>
+      <ul class="wwd-list">
+        <li>Market entry & competitive positioning</li>
+        <li>Go-to-market model design</li>
+        <li>Revenue growth & leakage identification</li>
+        <li>International expansion playbooks</li>
+        <li>Pricing & monetisation strategy</li>
+        <li>Partnership & distribution strategy</li>
+      </ul>
+    </div>
+    <div class="wwd-card reveal reveal-delay-1">
+      <div class="wwd-num">02</div>
+      <div class="wwd-title">Operational Transformation</div>
+      <div class="wwd-sub">Process redesign, operating model evolution, and PMO delivery — we run the programme, not just design it.</div>
+      <ul class="wwd-list">
+        <li>Current-state diagnostic & benchmarking</li>
+        <li>Future-state operating model design</li>
+        <li>Process optimisation & redesign</li>
+        <li>PMO setup & delivery governance</li>
+        <li>Cost transformation & EBITDA improvement</li>
+        <li>Change management & adoption</li>
+      </ul>
+    </div>
+    <div class="wwd-card reveal reveal-delay-2">
+      <div class="wwd-num">03</div>
+      <div class="wwd-title">Capital & Investor Advisory</div>
+      <div class="wwd-sub">From first-round pitch to PE exit — financial modelling, valuation, and investor narrative built to close deals.</div>
+      <ul class="wwd-list">
+        <li>Series A/B/C fundraise preparation</li>
+        <li>Financial modelling & DCF valuation</li>
+        <li>Investor pitch & narrative design</li>
+        <li>Bank & debt raise advisory</li>
+        <li>PE/VC due diligence preparation</li>
+        <li>Board presentation & LP reporting</li>
+      </ul>
+    </div>
+    <div class="wwd-card reveal">
+      <div class="wwd-num">04</div>
+      <div class="wwd-title">Digital & AI Strategy</div>
+      <div class="wwd-sub">AI readiness, GenAI implementation, and agentic workflow design — moving beyond strategy into production-grade transformation.</div>
+      <ul class="wwd-list">
+        <li>AI readiness assessment & roadmap</li>
+        <li>GenAI use case identification</li>
+        <li>Agentic workflow design</li>
+        <li>AI vendor evaluation & selection</li>
+        <li>Data platform strategy</li>
+        <li>Automation opportunity mapping</li>
+      </ul>
+    </div>
+    <div class="wwd-card reveal reveal-delay-1">
+      <div class="wwd-num">05</div>
+      <div class="wwd-title">Sector Deep-Dives</div>
+      <div class="wwd-sub">Domain expertise that goes beyond frameworks — we've worked inside these industries, not just advised on them.</div>
+      <ul class="wwd-list">
+        <li>Healthcare & life sciences</li>
+        <li>Fintech, payments & cards</li>
+        <li>GCC & shared services</li>
+        <li>Aviation & mobility</li>
+        <li>Q-commerce & D2C</li>
+        <li>Financial services & banking</li>
+      </ul>
+    </div>
+    <div class="wwd-card reveal reveal-delay-2">
+      <div class="wwd-num">06</div>
+      <div class="wwd-title">Fractional Leadership</div>
+      <div class="wwd-sub">Embedded COO, Chief of Staff, and interim C-suite — senior capability without the permanent cost or the hiring risk.</div>
+      <ul class="wwd-list">
+        <li>Fractional COO — P&L & ops ownership</li>
+        <li>Chief of Staff to CEO</li>
+        <li>Interim Strategy Director</li>
+        <li>PE portfolio company operator</li>
+        <li>0→1 build leadership</li>
+        <li>Board advisory & independent director</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES TABBED -->
+<section class="section services-full" id="services">
+  <div class="reveal" style="margin-bottom:3rem">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Practice Areas</span></div>
+    <h2 class="s-title">16 practices.<br><em>One firm.</em></h2>
+    <p class="s-sub">Click any practice area to explore our full service offering, methodology, and outcomes.</p>
+  </div>
+  <div class="svc-tabs">
+    <button class="svc-tab active" onclick="showTab('healthcare')">Healthcare</button>
+    <button class="svc-tab" onclick="showTab('fintech')">Fintech & Payments</button>
+    <button class="svc-tab" onclick="showTab('gtm')">GTM & Growth</button>
+    <button class="svc-tab" onclick="showTab('pricing')">Pricing Strategy</button>
+    <button class="svc-tab" onclick="showTab('transformation')">Transformation</button>
+    <button class="svc-tab" onclick="showTab('gcc')">GCC Advisory</button>
+    <button class="svc-tab" onclick="showTab('qcommerce')">Q-Commerce & D2C</button>
+    <button class="svc-tab" onclick="showTab('capital')">Capital Advisory</button>
+    <button class="svc-tab" onclick="showTab('ma')">Strategy & M&A</button>
+    <button class="svc-tab" onclick="showTab('ai')">Digital & AI</button>
+    <button class="svc-tab" onclick="showTab('aviation')">Aviation</button>
+    <button class="svc-tab" onclick="showTab('fractional')">Fractional C-Suite</button>
+    <button class="svc-tab" onclick="showTab('finserv')">Financial Services</button>
+    <button class="svc-tab" onclick="showTab('saas')">SaaS & Tech</button>
+    <button class="svc-tab" onclick="showTab('venture')">Venture Advisory</button>
+    <button class="svc-tab" onclick="showTab('ops')">Ops Excellence</button>
+  </div>
+
+  <!-- HEALTHCARE -->
+  <div class="svc-panel active" id="panel-healthcare">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Healthcare is not just a sector.<br>It's a <em style="color:var(--gold)">system of systems</em> — and we know how every part works.</div>
+      <p class="svc-desc">From greenfield hospital builds to enterprise-wide cost transformation, we bring both the strategic rigour of top-tier consulting and the operational depth of having run healthcare businesses. We've delivered $11M in savings at MD Anderson, built a 50-bed cardiac centre as COO, and designed medical tourism GTM strategies for international markets.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Most hospital strategy fails at execution — not conception. The winning model is one where the strategy team is also accountable for the first 90 days of delivery."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">$11M</div><div class="svc-outcome-label">Cost savings, MD Anderson</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">35%</div><div class="svc-outcome-label">Cost-per-case reduction</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">190</div><div class="svc-outcome-label">Person org built from zero</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Hospital Strategy & Build</div><div class="svc-sub-item-desc">Greenfield feasibility, DPR, clinical strategy, vendor selection, pre-launch ops</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Capital Raise & Financial Modelling</div><div class="svc-sub-item-desc">DCF valuation, debt structuring, Series A pitch, bank loan advisory</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Revenue Cycle Optimisation</div><div class="svc-sub-item-desc">Payer mix analysis, billing efficiency, collections, TPA management</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Cost Transformation</div><div class="svc-sub-item-desc">Activity-based costing, clinical variation analysis, physician-facing dashboards</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Medical Tourism GTM</div><div class="svc-sub-item-desc">Agency partnerships, international patient pathways, pricing for global markets</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">AI & Digital Health</div><div class="svc-sub-item-desc">AI vendor evaluation, GenAI copilots, interoperability, data platforms</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Value-Based Care</div><div class="svc-sub-item-desc">Care model redesign, network optimisation, outcomes measurement</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operational Excellence</div><div class="svc-sub-item-desc">SOPs, KPI frameworks, supply chain, staffing models, NABH readiness</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Hospital Build Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Feasibility</strong>Market & financial assessment</div>
+          <div class="ls"><strong>Design</strong>Clinical & ops model</div>
+          <div class="ls"><strong>Capital</strong>Raise & structure</div>
+          <div class="ls"><strong>Build</strong>Vendor & team setup</div>
+          <div class="ls"><strong>Launch</strong>Revenue activation</div>
+          <div class="ls"><strong>Scale</strong>Series A & growth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINTECH -->
+  <div class="svc-panel" id="panel-fintech">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">We don't just advise on fintech.<br>We've <em style="color:var(--gold)">built it</em> — from card programmes to payment rails.</div>
+      <p class="svc-desc">From card programme design to BNPL operating models, our work spans the full payments stack. We delivered 30× growth for Capital One's Venture X card, launched BofA's BNPL wing to 45× adoption, co-founded Blufin360 (a payments ERP scaled to 1,500+ clients), and advised Zolve, BillEase, PayMongo, and Kiwibank across market entry, product design, and GTM strategy.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"The fintechs that win aren't the ones with the best product — they're the ones who figured out distribution before they ran out of runway."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">30×</div><div class="svc-outcome-label">Card sales growth, Capital One</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">45×</div><div class="svc-outcome-label">BNPL adoption, BofA</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">2×</div><div class="svc-outcome-label">GMV, BillEase Philippines</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Card Programme Design & Launch</div><div class="svc-sub-item-desc">Product architecture, co-brand strategy, interchange optimisation, issuer partnerships</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">BNPL & Lending Strategy</div><div class="svc-sub-item-desc">Underwriting stack design, merchant GTM, risk-based pricing, credit segmentation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Payments GTM & Market Entry</div><div class="svc-sub-item-desc">Merchant segmentation, developer-first positioning, tiered pricing, partnership strategy</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Cross-Border Payments</div><div class="svc-sub-item-desc">Multi-currency architecture, correspondent banking, FX strategy, compliance</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Digital Banking & Neobank</div><div class="svc-sub-item-desc">Core banking redesign, product stack, operating model, regulatory navigation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Loyalty & Retention Design</div><div class="svc-sub-item-desc">Tiered switching-cost architecture, wallet share growth, LTV optimisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Regulatory & Licensing</div><div class="svc-sub-item-desc">RBI, MAS, FCA, APRA navigation; PA/PG compliance; AML/KYC frameworks</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">0→1 Fintech Build</div><div class="svc-sub-item-desc">Product-market fit, MVP design, team build, bank partnerships, investor pitch</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Fintech GTM Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Product</strong>Design & PMF</div>
+          <div class="ls"><strong>Compliance</strong>Licensing & risk</div>
+          <div class="ls"><strong>Partnerships</strong>Bank & merchant</div>
+          <div class="ls"><strong>Launch</strong>GTM execution</div>
+          <div class="ls"><strong>Scale</strong>Unit economics</div>
+          <div class="ls"><strong>Raise</strong>Next round</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GTM -->
+  <div class="svc-panel" id="panel-gtm">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Growth is not a campaign.<br>It's a <em style="color:var(--gold)">system</em> — built from the customer backwards.</div>
+      <p class="svc-desc">We design GTM strategies that are built to execute — not just to present in a board meeting. From ICP definition to sales motion design, from partnership strategy to revenue operations, we've taken businesses from zero to scale across fintech, healthcare, SaaS, and consumer markets globally.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"The biggest GTM mistake is building the product then asking 'who do we sell this to?' ICP and distribution must be designed before the product is finalised."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">−18%</div><div class="svc-outcome-label">CAC reduction, BillEase</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">+45%</div><div class="svc-outcome-label">Loan originations</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">+24%</div><div class="svc-outcome-label">Wallet share, Zolve</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">ICP Definition & Segmentation</div><div class="svc-sub-item-desc">Customer archetype design, segment prioritisation, TAM/SAM sizing, persona mapping</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Sales Motion Design</div><div class="svc-sub-item-desc">PLG vs SLG vs channel selection, sales process architecture, pipeline design, quota models</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Market Entry Playbooks</div><div class="svc-sub-item-desc">City/country prioritisation, beachhead strategy, localisation, regulatory clearance</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Partnership & Distribution Strategy</div><div class="svc-sub-item-desc">Channel partner design, distribution economics, co-sell motions, ecosystem strategy</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Revenue Operations (RevOps)</div><div class="svc-sub-item-desc">CRM architecture, funnel analytics, forecasting models, attribution frameworks</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Growth Loop Design</div><div class="svc-sub-item-desc">Viral mechanics, referral programmes, retention loops, CAC/LTV optimisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">International Expansion</div><div class="svc-sub-item-desc">Multi-market sequencing, country P&L modelling, regulatory mapping, team design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Demand Generation</div><div class="svc-sub-item-desc">Channel mix strategy, content-led growth, ABM frameworks, pipeline acceleration</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">GTM Build Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>ICP</strong>Define & size</div>
+          <div class="ls"><strong>Offer</strong>Value prop design</div>
+          <div class="ls"><strong>Motion</strong>Sales model</div>
+          <div class="ls"><strong>Pilot</strong>Test & learn</div>
+          <div class="ls"><strong>Scale</strong>Playbook rollout</div>
+          <div class="ls"><strong>Optimise</strong>CAC/LTV loops</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="svc-panel" id="panel-pricing">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Pricing is the highest-leverage<br>growth lever <em style="color:var(--gold)">most companies never pull.</em></div>
+      <p class="svc-desc">A 1% improvement in price realisation typically delivers 8-11% EBITDA improvement — more than equivalent volume or cost gains. Yet pricing is consistently under-invested in and under-managed. We bring rigorous pricing science combined with practical commercial experience across cards, SaaS, payments, healthcare, and consumer businesses.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Most businesses are leaving 15-25% of revenue on the table through sub-optimal pricing. The fix is rarely a price increase — it's a pricing architecture rebuild."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">20%</div><div class="svc-outcome-label">Revenue uplift, GMO Japan</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">+33%</div><div class="svc-outcome-label">MoM revenue, Kiwibank</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">+28%</div><div class="svc-outcome-label">Cardholder LTV, Blufin360</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Pricing Model Design</div><div class="svc-sub-item-desc">Subscription, usage-based, tiered, freemium, hybrid — selecting and building the right model for your market</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Price-to-Value Framework</div><div class="svc-sub-item-desc">Willingness-to-pay research, value metric identification, customer segmentation by price sensitivity</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Competitive Benchmarking</div><div class="svc-sub-item-desc">Market rate analysis, price positioning, competitive response modelling</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Packaging & Bundling Strategy</div><div class="svc-sub-item-desc">Feature-to-tier mapping, bundle optimisation, cross-sell architecture</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Discount Governance</div><div class="svc-sub-item-desc">Deal desk design, discount waterfall analysis, approval frameworks, revenue leakage identification</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Revenue Optimisation</div><div class="svc-sub-item-desc">Price increase execution, expansion revenue design, upsell motion architecture</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Market Entry Pricing</div><div class="svc-sub-item-desc">Launch pricing strategy, penetration vs premium decisions, regional pricing adaptation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">B2B vs B2C vs B2B2C Architecture</div><div class="svc-sub-item-desc">Multi-sided pricing, channel economics, partner margin design</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Pricing Transformation Journey</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Audit</strong>Leakage & benchmarks</div>
+          <div class="ls"><strong>Research</strong>WTP & segments</div>
+          <div class="ls"><strong>Design</strong>Model & packaging</div>
+          <div class="ls"><strong>Test</strong>Pilot & measure</div>
+          <div class="ls"><strong>Execute</strong>Rollout & comms</div>
+          <div class="ls"><strong>Govern</strong>Discount controls</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSFORMATION -->
+  <div class="svc-panel" id="panel-transformation">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Transformation programmes fail<br>when <em style="color:var(--gold)">strategy and delivery are separated.</em></div>
+      <p class="svc-desc">We bridge the gap. Our transformation engagements are built around a simple principle: the team that designs the future state also owns the first 100 days of delivery. From zero-based redesign to post-merger integration, we run programmes from diagnostic through to measurable outcomes — not just recommendations.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"70% of transformation programmes fail. The primary cause is not strategy — it's the handover between the people who designed the change and the people expected to deliver it."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">$16M</div><div class="svc-outcome-label">Ops turnaround, oil & gas</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">−30%</div><div class="svc-outcome-label">Cost reduction, multiple clients</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">20×</div><div class="svc-outcome-label">Portfolio company scaling</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Transformation Programme Design</div><div class="svc-sub-item-desc">Roadmap architecture, initiative prioritisation, business case development, sequencing</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Zero-Based Organisational Redesign</div><div class="svc-sub-item-desc">Org structure rebuild, role rationalisation, spans & layers, leadership layering</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Cost Transformation & EBITDA</div><div class="svc-sub-item-desc">Cost base analysis, zero-based budgeting, procurement optimisation, overhead reduction</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PMO Setup & Governance</div><div class="svc-sub-item-desc">Programme governance design, reporting frameworks, RAG tracking, steering cadence</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Post-Merger Integration</div><div class="svc-sub-item-desc">Integration planning, synergy capture, cultural alignment, operating model unification</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Change Management</div><div class="svc-sub-item-desc">Stakeholder alignment, communication design, adoption frameworks, capability building</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Turnaround & Value Capture</div><div class="svc-sub-item-desc">Rapid diagnostic, quick-win identification, 90-day stabilisation plan, recovery roadmap</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operating Model Evolution</div><div class="svc-sub-item-desc">Centralise vs decentralise decisions, shared services design, governance frameworks</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Transformation Delivery Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Diagnose</strong>Current state & gaps</div>
+          <div class="ls"><strong>Design</strong>Future state & roadmap</div>
+          <div class="ls"><strong>Prioritise</strong>Initiatives & cases</div>
+          <div class="ls"><strong>Pilot</strong>Test & validate</div>
+          <div class="ls"><strong>Scale</strong>Full rollout</div>
+          <div class="ls"><strong>Embed</strong>Sustain & govern</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GCC -->
+  <div class="svc-panel" id="panel-gcc">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">India is the world's GCC capital.<br>We help global firms <em style="color:var(--gold)">do it right</em> — not just cheaply.</div>
+      <p class="svc-desc">India hosts 1,700+ GCCs employing over 1.9 million people — and the market is growing 15%+ annually. But location selection is only 10% of the decision. The real value lies in operating model design, talent strategy, and the evolution from cost centre to value centre. We've helped multinationals navigate every phase of this journey.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"The GCCs that thrive are not the ones who chose the right city. They're the ones who designed the right operating model, governance structure, and talent proposition from day one."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">30–40%</div><div class="svc-outcome-label">Cost vs onshore operations</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-label">Faster time-to-hire vs direct</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">CoE</div><div class="svc-outcome-label">Value centre evolution</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Location Strategy & City Benchmarking</div><div class="svc-sub-item-desc">Hyderabad vs Pune vs Bangalore vs Chennai — talent, cost, infrastructure, ecosystem analysis</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Captive vs BOT vs Hybrid Decision</div><div class="svc-sub-item-desc">Build-operate-transfer analysis, cost modelling, risk assessment, partner evaluation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operating Model Design</div><div class="svc-sub-item-desc">Governance frameworks, shared services architecture, reporting structures, accountability design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Talent & Organisation Design</div><div class="svc-sub-item-desc">JD design, compensation benchmarking, leadership hiring, culture & retention playbooks</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Regulatory & FEMA Compliance</div><div class="svc-sub-item-desc">SEZ vs non-SEZ analysis, FEMA/RBI compliance, transfer pricing, entity structure</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">GCC to Value Centre Evolution</div><div class="svc-sub-item-desc">CoE build, IP ownership strategy, product engineering transition, innovation charter</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Digital & AI Integration</div><div class="svc-sub-item-desc">AI-first operating model, automation roadmap, data platform, GenAI capability build</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Employer Brand & Culture</div><div class="svc-sub-item-desc">EVP design, culture programming, DEIB frameworks, retention strategy</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">GCC Setup Journey</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Strategy</strong>Location & model</div>
+          <div class="ls"><strong>Legal</strong>Entity & compliance</div>
+          <div class="ls"><strong>Talent</strong>Hire & onboard</div>
+          <div class="ls"><strong>Operate</strong>Governance & KPIs</div>
+          <div class="ls"><strong>Scale</strong>Headcount & scope</div>
+          <div class="ls"><strong>Evolve</strong>CoE & IP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QCOMMERCE -->
+  <div class="svc-panel" id="panel-qcommerce">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Speed wins the first order.<br><em style="color:var(--gold)">Economics</em> wins the business.</div>
+      <p class="svc-desc">Q-Commerce is the fastest-growing retail channel globally — but also the most capital-intensive and operationally complex. We designed eBay Australia's dark store operating model (12× ROI), built supply chain transformation programmes for Walmart's 2,000+ locations, and helped FMCG and consumer brands design their D2C growth architecture from unit economics up.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Most Q-Commerce businesses can't tell you their contribution margin per order by city. That's why they're burning cash. The path to profitability runs through ruthless unit economics discipline."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">12×</div><div class="svc-outcome-label">ROI, eBay Q-Commerce model</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">−18%</div><div class="svc-outcome-label">Stockouts, Walmart</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">+35%</div><div class="svc-outcome-label">Repeat purchase rates</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Dark Store Network Design</div><div class="svc-sub-item-desc">Catchment modelling, hub-spoke architecture, location selection, capex optimisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Unit Economics Architecture</div><div class="svc-sub-item-desc">Contribution margin modelling by city/SKU, CAC/LTV optimisation, AOV lever design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Demand Forecasting & Replenishment</div><div class="svc-sub-item-desc">Predictive inventory models, SKU rationalisation, seasonal planning, overstock reduction</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Last-Mile Optimisation</div><div class="svc-sub-item-desc">Route optimisation, delivery partner strategy, SLA design, cost-per-delivery reduction</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">City-Level Launch Playbooks</div><div class="svc-sub-item-desc">Market prioritisation matrix, go/no-go framework, launch sequencing, local partnership strategy</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">D2C Growth Architecture</div><div class="svc-sub-item-desc">DTC channel strategy, retention loops, subscription models, marketplace vs owned channel</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Supplier & Vendor Management</div><div class="svc-sub-item-desc">Vendor SLA design, supplier consolidation, buying terms optimisation, cold chain strategy</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Category & Assortment Strategy</div><div class="svc-sub-item-desc">SKU portfolio design, category management, private label strategy, assortment localisation</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Q-Commerce Scale Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Economics</strong>Unit model build</div>
+          <div class="ls"><strong>Network</strong>Dark store design</div>
+          <div class="ls"><strong>Launch</strong>City 1 pilot</div>
+          <div class="ls"><strong>Optimise</strong>Margins & SLAs</div>
+          <div class="ls"><strong>Expand</strong>City playbook</div>
+          <div class="ls"><strong>Platform</strong>Tech & automation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAPITAL -->
+  <div class="svc-panel" id="panel-capital">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Capital is available.<br>The question is whether your <em style="color:var(--gold)">story and model can earn it.</em></div>
+      <p class="svc-desc">We've been on both sides of the table — as advisors on £3.7B M&A transactions and as operators raising capital for greenfield businesses. We build the financial models, investor narratives, and due diligence materials that close deals — and we prepare you for the questions investors actually ask, not just the ones in the deck.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Investors don't fund business plans. They fund conviction — in the team, the market, and the model. Our job is to make all three undeniable."</p>
+      </div>
+      <div class="svc-outcomes">
+        <div class="svc-outcome"><div class="svc-outcome-num">£3.7B</div><div class="svc-outcome-label">M&A advisory, Tesco/Barclays</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">$200M</div><div class="svc-outcome-label">PE transactions, Bain</div></div>
+        <div class="svc-outcome"><div class="svc-outcome-num">₹22.5Cr</div><div class="svc-outcome-label">Debt raise, EPIC Hospitals</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Series A/B/C Fundraise Preparation</div><div class="svc-sub-item-desc">Pitch deck, financial model, investor Q&A, data room, valuation benchmarking</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Financial Modelling & Valuation</div><div class="svc-sub-item-desc">DCF, LBO, comparables, WACC, DSCR, sensitivity analysis, scenario modelling</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Debt & Bank Advisory</div><div class="svc-sub-item-desc">Term loan structuring, DPR preparation, bank negotiation, moratorium design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PE/VC Due Diligence Prep</div><div class="svc-sub-item-desc">Commercial DD readiness, data room assembly, management presentation, Q&A preparation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PE Portfolio Value Creation</div><div class="svc-sub-item-desc">100-day plan, operational improvement, EBITDA expansion, exit preparation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">LP Reporting & Fund Materials</div><div class="svc-sub-item-desc">Quarterly reporting, fund narrative, investor relations, comparable fund benchmarking</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Board Presentation Design</div><div class="svc-sub-item-desc">Board decks, management reporting, KPI frameworks, narrative structuring</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">M&A Strategy & Integration</div><div class="svc-sub-item-desc">Target identification, deal structuring, integration roadmap, synergy capture</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Capital Raise Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Story</strong>Narrative & model</div>
+          <div class="ls"><strong>Materials</strong>Deck & data room</div>
+          <div class="ls"><strong>Outreach</strong>Investor targeting</div>
+          <div class="ls"><strong>Diligence</strong>Q&A & deep dives</div>
+          <div class="ls"><strong>Negotiate</strong>Term sheet</div>
+          <div class="ls"><strong>Close</strong>Docs & wire</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M&A -->
+  <div class="svc-panel" id="panel-ma">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Strategy without M&A is slow.<br>M&A without strategy is <em style="color:var(--gold)">expensive.</em></div>
+      <p class="svc-desc">We've executed PE due diligence across $200M in transactions, supported the CEO of Tesco Bank through a £3.7B acquisition by Barclays, and advised portfolio companies across fintech, healthcare, and infrastructure. Our M&A work is grounded in operational reality — we understand what actually changes post-close.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Most M&A value is destroyed in the 90 days after close — not because the deal was wrong, but because integration planning started too late."</p>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Corporate Strategy & Portfolio Design</div><div class="svc-sub-item-desc">Portfolio optimisation, capital allocation, growth vs harvest decisions</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Commercial Due Diligence</div><div class="svc-sub-item-desc">Market attractiveness, competitive position, revenue quality, customer concentration</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operational Due Diligence</div><div class="svc-sub-item-desc">Operating model assessment, management quality, process maturity, scalability</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Financial Due Diligence</div><div class="svc-sub-item-desc">Quality of earnings, working capital, cash flow normalisation, LBO modelling</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Integration Planning</div><div class="svc-sub-item-desc">Day-1 readiness, workstream design, synergy tracking, org integration</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Synergy Identification & Capture</div><div class="svc-sub-item-desc">Revenue synergies, cost synergies, capex optimisation, realisation tracking</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div class="svc-panel" id="panel-ai">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">AI is not a technology project.<br>It's a <em style="color:var(--gold)">business model transformation.</em></div>
+      <p class="svc-desc">We designed three-layer AI strategies for hospitals, built agentic workflow frameworks for fintech operations, and evaluated AI vendors across diagnostic imaging, clinical decision support, and financial services automation. We help organisations move beyond the AI hype — to production-grade implementation that changes unit economics.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"The ROI from AI doesn't come from the model. It comes from the workflow redesign around it. Most companies skip that part — and wonder why the pilot never scales."</p>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">AI Readiness Assessment</div><div class="svc-sub-item-desc">Data maturity, infrastructure, talent, governance — gap analysis and prioritised roadmap</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">GenAI Use Case Identification</div><div class="svc-sub-item-desc">Value mapping, feasibility scoring, ROI modelling, build vs buy vs partner</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Agentic Workflow Design</div><div class="svc-sub-item-desc">Process mapping, business rules definition, exception handling, agent specification</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">AI Vendor Evaluation</div><div class="svc-sub-item-desc">RFP design, vendor scoring, proof-of-concept design, contract negotiation support</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Data Platform Strategy</div><div class="svc-sub-item-desc">Data architecture, governance frameworks, interoperability, platform selection</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">AI Governance & Responsible AI</div><div class="svc-sub-item-desc">Ethics frameworks, bias auditing, regulatory compliance, model risk management</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVIATION -->
+  <div class="svc-panel" id="panel-aviation">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Aviation moves fast.<br>Strategy that can't keep up <em style="color:var(--gold)">gets left on the tarmac.</em></div>
+      <p class="svc-desc">We've worked with Southwest Airlines, Qatar Airways, Delta, Emirates, Singapore Airlines, and Swiss Air — across revenue management, operating model transformation, co-brand card GTM, and sustainability strategy. Aviation is one of the most complex operating environments on earth, and we know it from the inside.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"Airlines with the best loyalty programmes don't just retain customers — they create a financial services business that subsidises their core aviation operations."</p>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Revenue Management Strategy</div><div class="svc-sub-item-desc">Yield optimisation, network strategy, ancillary revenue design, pricing architecture</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Co-Brand Card & Loyalty GTM</div><div class="svc-sub-item-desc">Card programme design, bank partnership, loyalty architecture, customer LTV</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operating Model Transformation</div><div class="svc-sub-item-desc">MRO strategy, ground ops efficiency, hub optimisation, workforce redesign</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Sustainability & Decarbonisation</div><div class="svc-sub-item-desc">SAF strategy, emissions analytics, carbon offset framework, regulatory compliance</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">EV & Urban Mobility</div><div class="svc-sub-item-desc">Fleet electrification, charging infrastructure, CASE strategy, public-private partnerships</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Digital Transformation</div><div class="svc-sub-item-desc">Digital channel strategy, predictive maintenance, AI-driven ops, crew management</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRACTIONAL -->
+  <div class="svc-panel" id="panel-fractional">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Senior capability.<br>Immediate impact.<br><em style="color:var(--gold)">Without the permanent overhead.</em></div>
+      <p class="svc-desc">The best operators shouldn't be locked inside one company. Our fractional leadership model gives growth-stage businesses, PE portfolio companies, and transformation programmes access to senior operator talent — embedded, accountable, and outcome-focused — on terms that make sense for where you are in your journey.</p>
+      <div class="svc-insight">
+        <div class="svc-insight-label">A3 Perspective</div>
+        <p>"A fractional COO who has built a business is worth more than a full-time hire who has only advised on them. The key is accountability — they need skin in the outcome, not just the engagement."</p>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Fractional Roles Available</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Fractional COO</div><div class="svc-sub-item-desc">P&L ownership, team leadership, operational build, KPI governance, board reporting</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Chief of Staff to CEO</div><div class="svc-sub-item-desc">Strategic execution, stakeholder management, programme delivery, board prep</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Interim Strategy Director</div><div class="svc-sub-item-desc">Transformation leadership, roadmap ownership, workstream delivery, senior stakeholders</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Fractional CFO Advisory</div><div class="svc-sub-item-desc">Financial model, capital strategy, investor relations, board financial reporting</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PE Portfolio Operator</div><div class="svc-sub-item-desc">Embedded operator for portfolio companies — 100-day plan through exit preparation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">0→1 Build Leadership</div><div class="svc-sub-item-desc">Greenfield venture leadership — team build, product, GTM, capital raise</div></div>
+      </div>
+      <div class="svc-lifecycle">
+        <div class="svc-lifecycle-label">Engagement Model</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Scope</strong>Define mandate</div>
+          <div class="ls"><strong>Embed</strong>Join the team</div>
+          <div class="ls"><strong>Deliver</strong>Own outcomes</div>
+          <div class="ls"><strong>Build</strong>Team & systems</div>
+          <div class="ls"><strong>Transfer</strong>Knowledge & docs</div>
+          <div class="ls"><strong>Exit</strong>Or extend</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FINANCIAL SERVICES PANEL -->
+  <div class="svc-panel" id="panel-finserv">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Financial services is where we started.<br>And <em style="color:var(--gold)">where our deepest proof points live.</em></div>
+      <p class="svc-desc">From Capital One to Bank of America, GMO Japan to Raiffeisen Bank — our work spans cards, lending, banking, insurance, and wealth management across 4 continents. We've scaled card programmes 30×, launched BNPL to 45× adoption, and designed digital wallets reaching 3M+ active users.</p>
+      <div class="svc-insight"><div class="svc-insight-label">A3 Perspective</div><p>"The banks that win the next decade won't be the biggest. They'll be the ones that move fastest on digital distribution while everyone else is still debating strategy."</p></div>
+      <div class="kstrip">
+        <div class="kc"><div class="kc-n">30×</div><div class="kc-l">Card sales, Capital One</div></div>
+        <div class="kc"><div class="kc-n">3M+</div><div class="kc-l">Digital wallet users</div></div>
+        <div class="kc"><div class="kc-n">50×</div><div class="kc-l">Banking API growth</div></div>
+        <div class="kc"><div class="kc-n">20%</div><div class="kc-l">Revenue uplift, GMO</div></div>
+      </div>
+      <div class="dash-wrap">
+        <div class="dash-hdr"><span class="dash-ttl">Financial Services Intelligence</span><span class="dash-live">Live</span></div>
+        <div class="dash-kpis">
+          <div class="dkp"><div class="dkp-n">78%</div><div class="dkp-l">ROA, BofA BNPL</div><div class="dkp-t">↑ from 18%</div></div>
+          <div class="dkp"><div class="dkp-n">$1,500</div><div class="dkp-l">Annual Spend/Customer</div><div class="dkp-t">↑ +48%</div></div>
+          <div class="dkp"><div class="dkp-n">15%</div><div class="dkp-l">MoM Wallet Growth</div><div class="dkp-t">↑ Raiffeisen</div></div>
+          <div class="dkp"><div class="dkp-n">+24%</div><div class="dkp-l">Card Adoption</div><div class="dkp-t">↑ Uber/Barclays</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines — Financial Services</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Banking Strategy & Market Entry</div><div class="svc-sub-item-desc">Market entry, product portfolio optimisation, new revenue pool identification, ecosystem partnerships</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Retail & Corporate Banking Transformation</div><div class="svc-sub-item-desc">Product redesign, origination processes, distribution optimisation, digital channel strategy</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Credit Card & Co-Brand Strategy</div><div class="svc-sub-item-desc">Card pricing, revenue management, issuing/acquiring, co-brand partnerships (JPMorgan, DBS, Barclays)</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Digital Wallet & Super App</div><div class="svc-sub-item-desc">Wallet product design, merchant integration, UPI/SEPA/SWIFT rails, 15% MoM growth design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Risk & Compliance</div><div class="svc-sub-item-desc">Credit & collections, AML/KYC, model risk management, financial crime ops, regulatory frameworks</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Insurance Strategy</div><div class="svc-sub-item-desc">Product strategy, distribution model, embedded insurance, claims optimisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Wealth Management Advisory</div><div class="svc-sub-item-desc">Advisory model design, product shelf, digital wealth platforms, HNI proposition design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Data & AI for FS</div><div class="svc-sub-item-desc">CLV/churn models, fraud detection, marketing attribution, GenAI for ops and sales</div></div>
+      </div>
+      <div class="svc-lifecycle"><div class="svc-lifecycle-label">FS Digital Transformation Journey</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Assess</strong>Gaps & opps</div>
+          <div class="ls"><strong>Strategy</strong>Product & GTM</div>
+          <div class="ls"><strong>Digital</strong>Platform build</div>
+          <div class="ls"><strong>Data</strong>AI & analytics</div>
+          <div class="ls"><strong>Launch</strong>Market rollout</div>
+          <div class="ls"><strong>Scale</strong>Revenue growth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAAS PANEL -->
+  <div class="svc-panel" id="panel-saas">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">SaaS companies don't fail on product.<br>They fail on <em style="color:var(--gold)">pricing, GTM, and customer success.</em></div>
+      <p class="svc-desc">We built Stripe's first BAT platform across 20+ jurisdictions, designed corporate card value propositions for RAMP targeting 1M+ card issuances, and built pricing architecture for platforms across multiple sectors. Our SaaS work sits at the intersection of product strategy, revenue architecture, and growth execution.</p>
+      <div class="svc-insight"><div class="svc-insight-label">A3 Perspective</div><p>"Most SaaS companies expand revenue by adding features. The highest-leverage move is almost always fixing the pricing architecture — not the product roadmap."</p></div>
+      <div class="kstrip">
+        <div class="kc"><div class="kc-n">20+</div><div class="kc-l">Jurisdictions, Stripe</div></div>
+        <div class="kc"><div class="kc-n">1M+</div><div class="kc-l">Card issuances, RAMP</div></div>
+        <div class="kc"><div class="kc-n">−40%</div><div class="kc-l">Reporting time saved</div></div>
+        <div class="kc"><div class="kc-n">50×</div><div class="kc-l">API growth, BCG</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines — SaaS & Technology</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Product & Platform Strategy</div><div class="svc-sub-item-desc">ICP fit, product-market fit, platform roadmap, PLG/SLG motion design, feature prioritisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Monetisation & Pricing Architecture</div><div class="svc-sub-item-desc">Pricing model design, packaging, discount governance, usage-based models, revenue optimisation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">GTM & Sales Motion Design</div><div class="svc-sub-item-desc">GTM strategy, demand generation, partner ecosystems, RevOps & sales enablement</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Customer Success & NRR/GRR</div><div class="svc-sub-item-desc">Onboarding & adoption, support automation, NRR/GRR expansion, customer health scoring</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">AI & GenAI Integration</div><div class="svc-sub-item-desc">Embeddings/RAG, copilot design, analytics products, responsible AI implementation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">BAT Platform Design</div><div class="svc-sub-item-desc">Billing, accounting & tax across jurisdictions — Stripe model, reporting automation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">API Product Strategy</div><div class="svc-sub-item-desc">Developer-first positioning, API monetisation, marketplace strategy, ecosystem partnerships</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Corporate Card & B2B Fintech</div><div class="svc-sub-item-desc">Corporate card value proposition, B2B payment rails, spend management, enterprise GTM</div></div>
+      </div>
+      <div class="svc-lifecycle"><div class="svc-lifecycle-label">SaaS Growth Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>PMF</strong>ICP & fit</div>
+          <div class="ls"><strong>Pricing</strong>Architecture</div>
+          <div class="ls"><strong>GTM</strong>Motion design</div>
+          <div class="ls"><strong>Launch</strong>Market entry</div>
+          <div class="ls"><strong>NRR</strong>Expansion</div>
+          <div class="ls"><strong>Scale</strong>Next round</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VENTURE PANEL -->
+  <div class="svc-panel" id="panel-venture">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">We've sat on both sides of the cap table.<br>We know what <em style="color:var(--gold)">investors actually want.</em></div>
+      <p class="svc-desc">As General Partners managing $90M across two PE funds at OneGen, we've evaluated 100+ deals, invested in 12 startups, and delivered 4 LP exits at 120% ROI. We also supported the CEO of Tesco Bank through a £3.7B acquisition by Barclays. We build not just the deck, but the conviction that closes rounds.</p>
+      <div class="svc-insight"><div class="svc-insight-label">A3 Perspective</div><p>"The difference between a funded founder and an unfunded one is rarely the business. It's the ability to make an investor feel certainty about an uncertain thing."</p></div>
+      <div class="kstrip">
+        <div class="kc"><div class="kc-n">$90M</div><div class="kc-l">PE funds managed</div></div>
+        <div class="kc"><div class="kc-n">12</div><div class="kc-l">Portfolio investments</div></div>
+        <div class="kc"><div class="kc-n">120%</div><div class="kc-l">LP ROI on exits</div></div>
+        <div class="kc"><div class="kc-n">£3.7B</div><div class="kc-l">M&A advisory</div></div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines — Growth Equity & Venture Advisory</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Series A/B/C Fundraise Preparation</div><div class="svc-sub-item-desc">Pitch deck, financial model, investor Q&A, data room, valuation benchmarking</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Investor Narrative Design</div><div class="svc-sub-item-desc">Story architecture, market sizing, competitive moat, unit economics narrative</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PE Due Diligence (Buy-Side)</div><div class="svc-sub-item-desc">Commercial, operational, financial DD; LBO modelling; IC presentation; transaction execution</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Portfolio Company Operations</div><div class="svc-sub-item-desc">KPI dashboard, 100-day plans, EBITDA improvement, board reporting, operational scaling</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">LP Outreach & Fund Materials</div><div class="svc-sub-item-desc">Fund deck, LP targeting (TCHF, Tata Capital), comparable fund benchmarking</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Exit Preparation</div><div class="svc-sub-item-desc">Exit readiness, buyer targeting, CIM preparation, data room, management presentation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Debt & Bank Raise Advisory</div><div class="svc-sub-item-desc">Term loan structuring, DPR, PSU bank strategy (UBI), moratorium design, bank negotiation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Board Presentation Design</div><div class="svc-sub-item-desc">Board decks, management reporting, KPI frameworks, narrative structuring, investor updates</div></div>
+      </div>
+      <div class="svc-lifecycle"><div class="svc-lifecycle-label">Capital Raise Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Story</strong>Narrative</div>
+          <div class="ls"><strong>Materials</strong>Deck & room</div>
+          <div class="ls"><strong>Outreach</strong>Targeting</div>
+          <div class="ls"><strong>Diligence</strong>Q&A</div>
+          <div class="ls"><strong>Negotiate</strong>Term sheet</div>
+          <div class="ls"><strong>Close</strong>Docs & wire</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPS EXCELLENCE PANEL -->
+  <div class="svc-panel" id="panel-ops">
+    <div class="svc-panel-left">
+      <div class="svc-tagline">Operational excellence is not a programme.<br>It's a <em style="color:var(--gold)">culture — and a system.</em></div>
+      <p class="svc-desc">We've redesigned supply chains for 2,000+ Walmart locations, built operational frameworks for 190-person hospital teams, delivered $16M turnarounds, and generated $2.3M in annual savings through neobanking operating model redesign. Our operations work is grounded in lean principles and real-world implementation complexity.</p>
+      <div class="svc-insight"><div class="svc-insight-label">A3 Perspective</div><p>"The fastest path to EBITDA improvement is almost always operational — not strategic. Find the waste first, then redesign the strategy around what's actually possible."</p></div>
+      <div class="kstrip">
+        <div class="kc"><div class="kc-n">$16M</div><div class="kc-l">Ops turnaround</div></div>
+        <div class="kc"><div class="kc-n">$2.3M</div><div class="kc-l">Annual savings</div></div>
+        <div class="kc"><div class="kc-n">2,000+</div><div class="kc-l">Locations transformed</div></div>
+        <div class="kc"><div class="kc-n">33%</div><div class="kc-l">Network optimisation</div></div>
+      </div>
+      <div class="dash-wrap">
+        <div class="dash-hdr"><span class="dash-ttl">Operational Performance Dashboard</span><span class="dash-live">Live</span></div>
+        <div class="dash-kpis">
+          <div class="dkp"><div class="dkp-n">94%</div><div class="dkp-l">Process Efficiency</div><div class="dkp-t">↑ +18pts</div></div>
+          <div class="dkp"><div class="dkp-n">−30%</div><div class="dkp-l">Ops Cost</div><div class="dkp-t">↑ Achieved</div></div>
+          <div class="dkp"><div class="dkp-n">+25%</div><div class="dkp-l">Key Account Rev.</div><div class="dkp-t">↑ Delivered</div></div>
+          <div class="dkp"><div class="dkp-n">−15%</div><div class="dkp-l">AI Model Latency</div><div class="dkp-t">↑ Optimised</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-panel-right">
+      <div class="svc-sub-title">Full Service Lines — Operations Excellence</div>
+      <div class="svc-sub-grid">
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Process Optimisation & Redesign</div><div class="svc-sub-item-desc">Current-state mapping, waste identification, lean redesign, standard work, automation</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Supply Chain Transformation</div><div class="svc-sub-item-desc">Demand forecasting, inventory optimisation, vendor management, logistics redesign</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Operating Model Design</div><div class="svc-sub-item-desc">Centralise vs decentralise, shared services, governance, accountability frameworks</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Workforce Productivity</div><div class="svc-sub-item-desc">Staffing model, scheduling optimisation, productivity measurement, incentive design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Procurement Optimisation</div><div class="svc-sub-item-desc">Vendor rationalisation, buying terms, category management, supplier relationship design</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">PMO & Delivery Governance</div><div class="svc-sub-item-desc">Programme architecture, RAG tracking, steering cadence, delivery accountability</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">KPI Framework Design</div><div class="svc-sub-item-desc">Metrics architecture, dashboard design, board reporting, operational intelligence systems</div></div>
+        <div class="svc-sub-item"><div class="svc-sub-item-title">Cost Transformation</div><div class="svc-sub-item-desc">Zero-based budgeting, overhead reduction, EBITDA improvement, margin expansion</div></div>
+      </div>
+      <div class="svc-lifecycle"><div class="svc-lifecycle-label">Ops Transformation Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="ls"><strong>Map</strong>Current state</div>
+          <div class="ls"><strong>Identify</strong>Waste & gaps</div>
+          <div class="ls"><strong>Design</strong>Future state</div>
+          <div class="ls"><strong>Pilot</strong>Test</div>
+          <div class="ls"><strong>Scale</strong>Full rollout</div>
+          <div class="ls"><strong>Govern</strong>KPIs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- IMPACT -->
+<section class="section impact-section" id="impact">
+  <div class="impact-header">
+    <div class="reveal">
+      <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Selected Impact</span></div>
+      <h2 class="s-title">Outcomes across<br><em>industries & geographies</em></h2>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p class="s-sub">We measure our work in outcomes — revenue built, costs saved, deals closed, organisations transformed. Every engagement below was delivered, not just advised on.</p>
+    </div>
+  </div>
+  <div class="cases-grid">
+    <div class="case reveal">
+      <div class="case-sector">Financial Services</div>
+      <div class="case-client">Capital One · via McKinsey & Company</div>
+      <div class="case-title">Reclaiming market leadership in a stagnant card programme</div>
+      <div class="case-body">Repositioned the Venture X card and rebuilt retail and business GTM as two entirely separate motions — each with its own ICP, pricing logic, and channel strategy. Recovered market share within two quarters.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">30×</div><div class="case-metric-label">Sales growth in 6 months</div></div>
+      </div>
+    </div>
+    <div class="case reveal reveal-delay-1">
+      <div class="case-sector">Healthcare</div>
+      <div class="case-client">MD Anderson Cancer Centre · Board Advisory</div>
+      <div class="case-title">Enterprise-wide cost transformation across all service lines</div>
+      <div class="case-body">Led activity-based costing, clinical variation analysis, and physician-facing dashboards with peer benchmarking. Cross-functional alignment across Finance, clinical ops, and IT. Identified and validated sustainable savings without compromising care quality.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">$11M</div><div class="case-metric-label">Sustainable savings identified</div></div>
+        <div><div class="case-metric-val">35%</div><div class="case-metric-label">Cost-per-case reduction</div></div>
+      </div>
+    </div>
+    <div class="case reveal reveal-delay-2">
+      <div class="case-sector">Banking & Fintech</div>
+      <div class="case-client">Bank of America · via McKinsey & Company</div>
+      <div class="case-title">Launching a BNPL product from zero in a regulated banking environment</div>
+      <div class="case-body">Designed consumer BNPL operating model using credit-band segmentation. Launched with a phased rollout strategy that managed regulatory exposure while maximising adoption velocity.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">45×</div><div class="case-metric-label">Customer adoption in 12 months</div></div>
+        <div><div class="case-metric-val">78%</div><div class="case-metric-label">ROA (from 18% pre-launch)</div></div>
+      </div>
+    </div>
+    <div class="case reveal">
+      <div class="case-sector">Retail & Supply Chain</div>
+      <div class="case-client">Walmart Pharmacies · CEO Advisory</div>
+      <div class="case-title">Transforming supply chain and customer experience across 2,000+ locations</div>
+      <div class="case-body">Built market prioritisation model, predictive replenishment algorithm, and inventory segmentation framework. Transformed customer experience through doorstep delivery and prescription pre-readiness programmes.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">−18%</div><div class="case-metric-label">Stockout reduction</div></div>
+        <div><div class="case-metric-val">+20%</div><div class="case-metric-label">NPS improvement</div></div>
+      </div>
+    </div>
+    <div class="case reveal reveal-delay-1">
+      <div class="case-sector">M&A Advisory</div>
+      <div class="case-client">Tesco Bank · CEO Advisory</div>
+      <div class="case-title">Supporting a £3.7B acquisition — product, customers, and integration</div>
+      <div class="case-body">Worked directly with the CEO on pre-acquisition due diligence, product-market fit assessment, and integration roadmap covering 5M customers, 20M Clubcard relationships, and full product stack transition to Barclays.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">£3.7B</div><div class="case-metric-label">Transaction value advised on</div></div>
+      </div>
+    </div>
+    <div class="case reveal reveal-delay-2">
+      <div class="case-sector">Greenfield Hospital Build</div>
+      <div class="case-client">EPIC International Hospitals · COO</div>
+      <div class="case-title">Building a 50-bed cardiac centre from zero — strategy, capital, and operations</div>
+      <div class="case-body">Full P&L ownership and end-to-end operational delivery across a 190-person team. Structured and closed ₹22.5Cr term loan at 8.25% with 18-month moratorium. Built financial model, investor roadmap, and Series A pipeline.</div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">0→1</div><div class="case-metric-label">Greenfield operational launch</div></div>
+        <div><div class="case-metric-val">₹22.5Cr</div><div class="case-metric-label">Debt raise closed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="section how" id="how">
+  <div class="how-header reveal">
+    <div class="s-eyebrow"><div class="s-eyebrow-line" style="background:var(--navy3)"></div><span class="s-eyebrow-text" style="color:var(--navy3)">Our Methodology</span></div>
+    <h2 class="s-title" style="color:var(--navy)">How we <em>deliver</em></h2>
+    <p class="s-sub" style="color:#6B6860">Every engagement follows a disciplined four-phase methodology — but we're not rigid about it. We meet you where you are and accelerate from there.</p>
+  </div>
+  <div class="phases">
+    <div class="phase reveal">
+      <div class="phase-num">01</div>
+      <div class="phase-title">Diagnose</div>
+      <div class="phase-desc">Understand the current state with rigour. Benchmark against the best. Identify where value is being created and destroyed.</div>
+      <ul class="phase-items">
+        <li>Current state assessment</li>
+        <li>Stakeholder interviews</li>
+        <li>Competitive benchmarking</li>
+        <li>Opportunity sizing</li>
+        <li>Root cause analysis</li>
+      </ul>
+    </div>
+    <div class="phase reveal reveal-delay-1">
+      <div class="phase-num">02</div>
+      <div class="phase-title">Design</div>
+      <div class="phase-desc">Build the future state with precision. Hypothesis-led, data-driven, and grounded in operational reality — not theoretical best practice.</div>
+      <ul class="phase-items">
+        <li>Solution architecture</li>
+        <li>Business case development</li>
+        <li>Roadmap design</li>
+        <li>Stakeholder alignment</li>
+        <li>Risk identification</li>
+      </ul>
+    </div>
+    <div class="phase reveal reveal-delay-2">
+      <div class="phase-num">03</div>
+      <div class="phase-title">Pilot</div>
+      <div class="phase-desc">Test before you scale. Build in focused sprints, measure against real outcomes, and iterate rapidly before full commitment.</div>
+      <ul class="phase-items">
+        <li>Focused sprint delivery</li>
+        <li>KPI tracking & reporting</li>
+        <li>Rapid iteration</li>
+        <li>Learning capture</li>
+        <li>Scale-readiness assessment</li>
+      </ul>
+    </div>
+    <div class="phase reveal reveal-delay-3">
+      <div class="phase-num">04</div>
+      <div class="phase-title">Scale</div>
+      <div class="phase-desc">Embed the change. Build capability. Ensure the organisation can sustain and grow what's been built — without us in the room.</div>
+      <ul class="phase-items">
+        <li>Operating model embedding</li>
+        <li>Capability building</li>
+        <li>Change management</li>
+        <li>Governance design</li>
+        <li>Knowledge transfer</li>
+      </ul>
+    </div>
+  </div>
+  <div class="how-model reveal">
+    <div class="model-item">
+      <div class="model-item-title">Embedded, not parachuted</div>
+      <div class="model-item-desc">We work inside your team, not above it. Our outputs are practical and implementable — designed for your organisation, not a generic client.</div>
+    </div>
+    <div class="model-item">
+      <div class="model-item-title">Outcomes over outputs</div>
+      <div class="model-item-desc">We measure success in revenue built, costs saved, and deals closed — not slide decks delivered or workshops run.</div>
+    </div>
+    <div class="model-item">
+      <div class="model-item-title">Senior throughout</div>
+      <div class="model-item-desc">The person you meet is the person who does the work. No bait-and-switch. No junior associates running your engagement unsupervised.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="section who" id="who">
+  <div class="reveal" style="max-width:600px;margin-bottom:3rem">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Who We Serve</span></div>
+    <h2 class="s-title">Built for the<br><em>ambitious and the impatient</em></h2>
+    <p class="s-sub">We work with a select number of clients — those who are ready to move from strategy to execution.</p>
+  </div>
+  <div class="who-grid">
+    <div class="who-card reveal">
+      <div class="who-icon"><span>F</span></div>
+      <div class="who-title">Founders & CEOs Scaling Beyond the Founding Model</div>
+      <div class="who-desc">You've found product-market fit. Revenue is growing. But the organisation hasn't kept pace — the operating model, team structure, and governance are still built for a company half your current size. We help you build the infrastructure for the next stage.</div>
+      <div class="who-signals"><span class="who-signal">$5M–$100M revenue</span><span class="who-signal">High growth</span><span class="who-signal">Founder-led</span><span class="who-signal">Pre-IPO</span></div>
+    </div>
+    <div class="who-card reveal reveal-delay-1">
+      <div class="who-icon"><span>PE</span></div>
+      <div class="who-title">PE & VC Firms Needing Embedded Operators</div>
+      <div class="who-desc">Your portfolio company needs senior operational support — someone who can sit inside the business, own a P&L, and drive transformation without the cost or risk of a permanent hire. We deploy experienced operators into portfolio companies for 4–26 week engagements.</div>
+      <div class="who-signals"><span class="who-signal">Portfolio operations</span><span class="who-signal">100-day plans</span><span class="who-signal">Exit prep</span><span class="who-signal">Value creation</span></div>
+    </div>
+    <div class="who-card reveal">
+      <div class="who-icon"><span>H</span></div>
+      <div class="who-title">Hospitals & Healthcare Organisations Raising Capital or Building Operations</div>
+      <div class="who-desc">You're building a hospital, raising capital, designing a medical tourism programme, or transforming your cost base. You need someone who has done this before — as an operator and as an advisor. We've built hospitals from zero and delivered $11M in savings at MD Anderson.</div>
+      <div class="who-signals"><span class="who-signal">Greenfield build</span><span class="who-signal">Capital raise</span><span class="who-signal">Cost transformation</span><span class="who-signal">Medical tourism</span></div>
+    </div>
+    <div class="who-card reveal reveal-delay-1">
+      <div class="who-icon"><span>G</span></div>
+      <div class="who-title">Global Companies Designing Their India GCC</div>
+      <div class="who-desc">India is the world's GCC capital — but getting it right is harder than it looks. Location, operating model, talent strategy, and the evolution from cost centre to value centre all require expertise that goes beyond generic consulting frameworks. We've navigated every part of this.</div>
+      <div class="who-signals"><span class="who-signal">GCC setup</span><span class="who-signal">Location strategy</span><span class="who-signal">Operating model</span><span class="who-signal">CoE design</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="s-eyebrow reveal"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Founder & Managing Partner</span></div>
+      <h2 class="s-title reveal" style="margin-bottom:0.5rem">Akhil J. Simha</h2>
+      <div class="edu-row reveal">
+        <span class="edu-pill">Harvard Business School · MBA · Class of 2019</span>
+        <span class="edu-pill">Osmania University · Gold Medalist</span>
+      </div>
+      <p class="about-bio-lead reveal" style="margin-top:2rem">I'm the person companies call when strategy needs to actually happen.</p>
+      <p class="about-bio-body reveal">14 years across <strong>McKinsey, BCG, Bain, BlackRock, and Stripe</strong> — and two companies built from scratch. I've sat in the boardroom and on the factory floor. I've closed <strong>$200M in PE transactions</strong> and built hospitals from zero. I've scaled card programmes <strong>30×</strong> and negotiated bank loans at 8.25%.</p>
+      <p class="about-bio-body reveal">My work sits at the intersection of three things most people can only do one of: <strong>Strategic rigour. Operational execution. Founder-level ownership.</strong> A3 Rocket Consulting was built to make that combination available to the companies that need it most.</p>
+      <div class="principles reveal">
+        <div class="principle">
+          <div class="p-num">01</div>
+          <div class="p-text">"We don't do decks without delivery. The slide deck is the least valuable thing we produce."</div>
+        </div>
+        <div class="principle">
+          <div class="p-num">02</div>
+          <div class="p-text">"Outcomes over outputs — always. We are accountable for what happens after the recommendation."</div>
+        </div>
+        <div class="principle">
+          <div class="p-num">03</div>
+          <div class="p-text">"We've been in your seat. That changes everything about how we give advice."</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="timeline-v2 reveal">
+        <div class="tl2-item">
+          <div class="tl2-year">2013</div>
+          <div class="tl2-content"><div class="tl2-firm">BlackRock · Reserve Bank of India</div><div class="tl2-detail">Aladdin Wealth platform · Payments & Settlement Systems</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2014</div>
+          <div class="tl2-content"><div class="tl2-firm">Bain & Company — Consultant</div><div class="tl2-detail">PE due diligence · Operations transformation · $200M in transactions at 20% ROI</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2015</div>
+          <div class="tl2-content"><div class="tl2-firm">Boston Consulting Group — Strategy Consultant</div><div class="tl2-detail">GMO Japan · Banking API 50× growth · Blockchain payment redesign</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2017</div>
+          <div class="tl2-content"><div class="tl2-firm">Stripe · RAMP · Paytm</div><div class="tl2-detail">Built Stripe's first BAT platform · Corporate card GTM · Paytm Money strategy</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2017</div>
+          <div class="tl2-content"><div class="tl2-firm">Harvard Business School — MBA</div><div class="tl2-detail">Class of 2019 · Boston, Massachusetts</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2019</div>
+          <div class="tl2-content"><div class="tl2-firm">McKinsey & Company — Engagement Manager</div><div class="tl2-detail">Capital One 30× · BofA 45× · eBay Q-Commerce 12× ROI · 4 years</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2023</div>
+          <div class="tl2-content"><div class="tl2-firm">Independent Advisory</div><div class="tl2-detail">MD Anderson · Walmart · Kiwibank · Tesco Bank · Zolve · OneGen PE ($90M AUM)</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2025</div>
+          <div class="tl2-content"><div class="tl2-firm">Blufin360 — Co-Founder & COO</div><div class="tl2-detail">Payments fintech · 0→1 · 1,500+ clients · ₹10Cr AUM · 12 months</div></div>
+        </div>
+        <div class="tl2-item">
+          <div class="tl2-year">2026</div>
+          <div class="tl2-content"><div class="tl2-firm">EPIC International Hospitals — COO · A3 Rocket Consulting — Founder</div><div class="tl2-detail">190-person team · ₹22.5Cr raise · Series A pipeline · A3 Rocket Consulting founded</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="section insights" id="insights">
+  <div class="reveal" style="max-width:600px;margin-bottom:3rem">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Perspectives</span></div>
+    <h2 class="s-title">Sharp thinking on<br><em>strategy, growth & execution</em></h2>
+  </div>
+  <div class="insights-grid">
+    <div class="insight-card reveal">
+      <div class="insight-tag">Healthcare · Capital</div>
+      <div class="insight-title">What a DSCR of 1.05× actually means for hospital promoters</div>
+      <div class="insight-excerpt">Most hospital financial models are built to impress bankers, not to survive them. Here's what the critical Year 2 debt service ratio tells you about whether your model is fundable — and what to do if it isn't.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+    <div class="insight-card reveal reveal-delay-1">
+      <div class="insight-tag">Fintech · Growth</div>
+      <div class="insight-title">Why most fintech GTM strategies fail at Series B</div>
+      <div class="insight-excerpt">Series A fintechs raise on product. Series B fintechs raise on distribution. The problem is that most of them haven't built one. Here's the GTM architecture that separates the companies that scale from the ones that plateau.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+    <div class="insight-card reveal reveal-delay-2">
+      <div class="insight-tag">GCC Advisory</div>
+      <div class="insight-title">The GCC decision framework: captive vs BOT vs hybrid</div>
+      <div class="insight-excerpt">The location decision is the easy part. The model decision — captive, build-operate-transfer, or hybrid — determines whether your GCC becomes a strategic asset or an expensive headcount exercise. Here's how to choose.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+    <div class="insight-card reveal">
+      <div class="insight-tag">Pricing · Revenue</div>
+      <div class="insight-title">The 15% revenue you're leaving on the table — and how to find it</div>
+      <div class="insight-excerpt">Pricing is the highest-leverage growth lever most companies never pull. Based on 14 years of commercial engagements, here are the five pricing architecture failures that consistently destroy margin — and how to fix them.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+    <div class="insight-card reveal reveal-delay-1">
+      <div class="insight-tag">Transformation · Operations</div>
+      <div class="insight-title">Why 70% of transformation programmes fail — and the one thing that changes the odds</div>
+      <div class="insight-excerpt">The research is consistent: most transformations destroy value. The primary cause is not strategy quality or budget — it's the handover between those who design the change and those who deliver it.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+    <div class="insight-card reveal reveal-delay-2">
+      <div class="insight-tag">Q-Commerce · Unit Economics</div>
+      <div class="insight-title">Building a dark store network that actually makes money</div>
+      <div class="insight-excerpt">Most Q-Commerce businesses can't tell you their contribution margin per order by city. That's not a data problem — it's a model design problem. Here's the unit economics framework that determines which cities to enter and which to exit.</div>
+      <span class="insight-read">Read Perspective</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="s-eyebrow reveal" style="justify-content:center"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Ready to Begin?</span><div class="s-eyebrow-line"></div></div>
+  <h2 class="s-title reveal" style="text-align:center">If you're building something serious,<br><em>we should speak.</em></h2>
+  <p class="s-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto">We work with a select number of clients at any given time. Engagements are high-touch, outcome-focused, and built around your specific situation — not a generic framework.</p>
+  <div class="hero-ctas reveal" style="justify-content:center">
+    <a href="#contact" class="btn-gold">Start a Conversation</a>
+    <a href="#services" class="btn-ghost">Explore Our Services</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="s-eyebrow reveal"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Get In Touch</span></div>
+      <h2 class="s-title reveal">Let's <em>talk.</em></h2>
+      <div class="contact-quote reveal">
+        <p>"The best outcomes happen when someone with MBB training has also done the job themselves — built the team, raised the capital, managed the P&L, and lived with the consequences."</p>
+        <cite>— Akhil J. Simha, Founder & Managing Partner, A3 Rocket Consulting</cite>
+      </div>
+      <div class="contact-details reveal">
+        <div class="cd-item"><div class="cd-label">Email</div><div class="cd-value">contact@a3rocketconsulting.com</div></div>
+        <div class="cd-item"><div class="cd-label">LinkedIn</div><div class="cd-value">linkedin.com/in/akhiljas107</div></div>
+        <div class="cd-item"><div class="cd-label">Based</div><div class="cd-value">Hyderabad, India · Available globally</div></div>
+        <div class="cd-item"><div class="cd-label">Engagements</div><div class="cd-value">Project-based · Retainer · Fractional · Fixed fee</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" onsubmit="return false">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name">
+          <input type="text" placeholder="Company">
+        </div>
+        <input type="email" placeholder="Email Address">
+        <select>
+          <option value="" disabled selected>What are you working on?</option>
+          <option>Strategy & GTM</option>
+          <option>Capital Raise & Investor Advisory</option>
+          <option>Operational Transformation</option>
+          <option>Business Transformation</option>
+          <option>GCC Setup & Advisory</option>
+          <option>Fintech & Payments</option>
+          <option>Healthcare Strategy</option>
+          <option>Pricing Strategy</option>
+          <option>Digital & AI Strategy</option>
+          <option>Q-Commerce & D2C</option>
+          <option>Aviation & Mobility</option>
+          <option>Fractional COO / Chief of Staff</option>
+          <option>M&A Advisory</option>
+          <option>PE Portfolio Support</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us briefly about your situation, what you're trying to achieve, and the timeline you're working to..."></textarea>
+        <button type="submit" class="btn-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">A3 Rocket Consulting</div>
+  <div class="footer-links">
+    <a href="#whatwedo">Capabilities</a>
+    <a href="#services">Services</a>
+    <a href="#impact">Impact</a>
+    <a href="#about">About</a>
+    <a href="#insights">Insights</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 A3 Rocket Consulting · Where McKinsey Rigour Meets Founder Execution</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis')}})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})})});
+function showTab(id){
+  document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.svc-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function buildBars(id, data) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  c.innerHTML = '';
+  data.forEach(h => {
+    const b = document.createElement('div');
+    b.className = 'bar';
+    b.style.height = h + '%';
+    c.appendChild(b);
+  });
+}
+const bd = [38,45,52,48,60,55,68,65,72,70,78,75,82,80,88,85,92,90,96,94];
+buildBars('fs-bars', bd);
+buildBars('ops-bars', bd.map(x => Math.min(99, x + 5)));
+
+</script>
+</body>
+</html>
